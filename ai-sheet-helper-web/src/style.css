@@ -1,0 +1,72 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+:root {
+  --toolbar-height: 100px;
+}
+
+#univer-container {
+  height: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#toolbar {
+  height: var(--toolbar-height);
+  display: flex;
+  gap: 0.5rem 1rem;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+#toolbar a {
+  height: 28px;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  line-height: 28px;
+  background-color: #fff;
+  border: 1px solid #b4b4b4;
+  border-radius: 4px;
+  display: block;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+#toolbar a:hover {
+  color: #274fee;
+  border-color: #274fee;
+}
+
+#univer-container {
+  height: calc(100% - var(--toolbar-height));
+  border: 1px solid #ececec;
+}
+
+.toolbar-container {
+  height: 100%;
+  padding-left: 5px;
+  background: white;
+  border-left: 1px solid gray;
+}
+
+label {
+  font-weight: bold;
+}
+
+.code {
+  font-family: monospace;
+  font-size: 0.875rem;
+  white-space: pre;
+  line-height: 1.5;
+  background: #f5f5f5;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  overflow: auto;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: brown;
+}
