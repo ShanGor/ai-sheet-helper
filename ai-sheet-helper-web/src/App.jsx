@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react'
 import './style.css'
 import {SetupUniver} from './setupUniver.jsx'
 import {fetchEvents} from "./Utility.js";
+import ExcelLoader from './components/ExcelLoader';
 
 const mapColumn = (column) => {
     const alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -105,6 +106,7 @@ function App() {
 
           <div style={{width: '30%'}} className={'toolbar-container'}>
               <h2>AI Sheet Helper</h2>
+              {univerAPI && <ExcelLoader univerAPI={univerAPI} />}
               <div>
                   <label>Current Selections: </label>
                   <span className='code'>
